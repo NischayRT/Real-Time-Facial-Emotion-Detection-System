@@ -211,12 +211,12 @@ source emotion_env/bin/activate
 
 #### Basic Installation (without MTCNN)
 ```bash
-pip install -r requirements_advanced.txt
+pip install -r requirements.txt
 ```
 
 #### Full Installation (with MTCNN for better face detection)
 ```bash
-pip install -r requirements_advanced.txt
+pip install -r requirements.txt
 pip install mtcnn
 ```
 
