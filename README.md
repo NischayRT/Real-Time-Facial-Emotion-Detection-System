@@ -251,7 +251,7 @@ If you have the pre-trained model file:
 
 ```bash
 # Place Emotion_Detection.h5 in project directory
-python test_advanced.py
+python test.py
 ```
 
 **What happens:**
@@ -272,9 +272,9 @@ python test_advanced.py
 
 ```bash
 # 1. Organize your dataset (see Dataset Structure section)
-# 2. Update paths in train_advanced.py
+# 2. Update paths in train.py
 # 3. Run training
-python train_advanced.py
+python train.py
 ```
 
 ---
@@ -285,12 +285,12 @@ python train_advanced.py
 
 #### Basic Usage
 ```bash
-python test_advanced.py
+python test.py
 ```
 
 #### With Custom Model
 ```python
-# Edit test_advanced.py, line 21
+# Edit test.py, line 21
 MODEL_PATH = './models/your_custom_model.h5'
 ```
 
@@ -364,7 +364,7 @@ fer2013/
 
 ### Training Configuration
 
-Edit `train_advanced.py` to customize training:
+Edit `train.py` to customize training:
 
 ```python
 class TrainingConfig:
@@ -389,7 +389,7 @@ class TrainingConfig:
 ### Running Training
 
 ```bash
-python train_advanced.py
+python train.py
 ```
 
 **Training Process:**
@@ -463,7 +463,7 @@ tensorboard --logdir=./logs
 
 ### Detection Configuration
 
-Edit constants in `test_advanced.py`:
+Edit constants in `test.py`:
 
 ```python
 # Configuration
@@ -575,7 +575,7 @@ pip install mtcnn
 
 **A. Reduce Resolution**
 ```python
-# In test_advanced.py, after cap = cv2.VideoCapture(0)
+# In test.py, after cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 ```
@@ -654,7 +654,7 @@ IMG_SIZE = 48  # Instead of 224
 
 **C. Enable GPU Memory Growth**
 ```python
-# Add to train_advanced.py
+# Add to train.py
 import tensorflow as tf
 gpus = tf.config.list_physical_devices('GPU')
 for gpu in gpus:
